@@ -4,6 +4,10 @@
   <link rel="stylesheet" type="text/css" href="../domarrow.css" />
   <script type="text/javascript" src="../domarrow.js"></script>
   <style>
+    #optionalParentDiv {
+      position: relative;
+      left: 100px;
+    }
     #d1, #d2 {
       position: absolute;
       width: 50px;
@@ -22,8 +26,11 @@
   </style>
 </head>
 <body>
-  <div id="d1"></div>
-  <div id="d2"></div>
+  <div id="optionalParentDiv">
+    <div id="d1"></div>
+    <div id="d2"></div>
+  </div>
+  
   <connection from="#d1" to="#d2" color="red" tail></connection>
   <connection from="#d1" to="#d2" color="purple" fromX="0" fromY="1" toX="0" toY="0.75" head tail></connection>
   <connection from="#d2" to="#d1" color="#aaaaaa" fromX="1" tail onlyVisible></connection>
